@@ -24,7 +24,7 @@ You are allowed to use any freely available (and permitted by copyright law) res
 ### Technologies NOT allowed
 * jQuery
 * bootstrap
-* any client side framework other than Polymer
+* any client side framework other than Polymer 1/2
 
 # How to do it?
 * Fork this repository to your personal github account.
@@ -32,12 +32,11 @@ You are allowed to use any freely available (and permitted by copyright law) res
 * Notify us by email.
 
 # Timelimit
-You should ideally complete the task in less than 24 work hours. In no circumstances it should take you more than 48 work hours.
+You should ideally complete the task in 5 days. In no circumstances it should take you more than 7days.
 
-Your individualized deadline will depend on the date you apply on. Usually it's within 7 days from your application.
 
 # Notes
-* Make sure to commit around every 5 to 15 minutes while you work. It is extremely important. Make sure your commits messages make sense.
+* Make sure to commit around every 25 to 30 minutes while you work. It is extremely important. Make sure your commits messages make sense.
 * Sync your commits work every hour.
 * Read up references as much as you need. Reading is appreciated.
 * You may showcase your work on your portfolio regardless you work with us or not.
