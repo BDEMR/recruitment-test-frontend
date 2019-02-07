@@ -1,0 +1,94 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/paper-menu-button/paper-menu-button.html">
+<link rel="import" href="../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../bower_components/paper-item/paper-item-body.html">
+<link rel="import" href="../bower_components/paper-listbox/paper-listbox.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/paper-toggle-button/paper-toggle-button.html">
+
+
+<dom-module id="my-settings">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+        padding: 10px;
+      }
+    </style>
+
+    <h2>My Settings</h2>
+    <div class="card">
+        <div class="card">
+            <iron-icon icon="settings"></iron-icon>
+            <h2 style="display:inline;">General</h2>
+            <div class="card">
+                <iron-icon icon="donut-small"></iron-icon>
+                <h3 style="display:inline;">Change Theme</h3>
+                <paper-icon-button icon="chevron-right" style="float:right;">
+                </paper-icon-button>
+            </div>
+            <div class="card">
+                <iron-icon icon="rounded-corner"></iron-icon>
+                <h3 style="display:inline;">Add Module</h3>
+                <paper-icon-button icon="add-circle" style="float:right;">
+                </paper-icon-button>
+            </div>
+            <div class="card">
+                <h3 style="display:inline;">Confirm Before Closing</h3>
+                <paper-toggle-button checked style="float:right;"></paper-toggle-button>
+            </div>
+        </div>
+
+        <div class="card">
+            <iron-icon icon="view-headline"></iron-icon>
+            <h2 style="display:inline;">Messages</h2>
+            <div class="card">
+                <h3 style="display:inline;">Change Font</h3>
+                <paper-icon-button icon="settings" style="float:right;">
+                </paper-icon-button>
+            </div>
+        </div>
+
+        
+    </div>
+
+  </template>
+
+  <script>
+    class MySettings extends Polymer.Element {
+      static get is() { return 'my-settings'; }
+      static get properties() {
+        return {
+          open: {
+            type: Boolean,
+            notify: true,
+            reflectToAttribute: true,
+            value: false
+          },
+          
+        }
+      }
+      constructor() {
+        super();
+      }
+
+    }
+
+    window.customElements.define(MySettings.is, MySettings);
+  </script>
+</dom-module>

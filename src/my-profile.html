@@ -1,0 +1,86 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/paper-menu-button/paper-menu-button.html">
+<link rel="import" href="../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../bower_components/paper-item/paper-item-body.html">
+<link rel="import" href="../bower_components/paper-listbox/paper-listbox.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+
+
+<dom-module id="my-profile">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+        padding: 10px;
+      }
+    </style>
+
+    <h2>My Profile</h2>
+    <div class="card">
+        <div class="card">
+            <iron-icon icon="account-circle"></iron-icon>
+            <h3 style="display:inline;">Add Profile Picture</h3>
+            <paper-icon-button icon="add-circle" style="float:right;">
+            </paper-icon-button>
+        </div>
+        <div class="card">
+          <h3>Username : Test</h3>
+        </div>
+        <div class="card">
+          <h3>Email : Test@test.com</h3>
+        </div>
+        <div class="card">
+            <iron-icon icon="build"></iron-icon>
+            <h3 style="display:inline;">Manage Your Account</h3>
+            <paper-icon-button icon="settings" style="float:right;">
+            </paper-icon-button>
+        </div>
+        <div class="card">
+            <iron-icon icon="close"></iron-icon>
+          <h3 style="display:inline;">Close Account</h3>
+          <paper-icon-button icon="settings" style="float:right;">
+          </paper-icon-button>
+        </div>
+
+    </div>
+
+  </template>
+
+  <script>
+    class MyProfile extends Polymer.Element {
+      static get is() { return 'my-profile'; }
+      static get properties() {
+        return {
+          open: {
+            type: Boolean,
+            notify: true,
+            reflectToAttribute: true,
+            value: false
+          },
+          
+        }
+      }
+      constructor() {
+        super();
+      }
+
+    }
+
+    window.customElements.define(MyProfile.is, MyProfile);
+  </script>
+</dom-module>
