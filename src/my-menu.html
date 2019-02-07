@@ -1,0 +1,61 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/paper-menu-button/paper-menu-button.html">
+<link rel="import" href="../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../bower_components/paper-item/paper-item-body.html">
+<link rel="import" href="../bower_components/paper-listbox/paper-listbox.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+
+
+<dom-module id="my-menu">
+  <template>
+
+    <paper-menu-button>
+        <paper-icon-button icon="account-circle" slot="dropdown-trigger"></paper-icon-button>
+        <paper-listbox slot="dropdown-content">
+
+            <a name="profile" href="[[rootPath]]profile" tabindex="-1">
+                <paper-item raised>Profile</paper-item>
+            </a>
+            <a name="settings" href="[[rootPath]]settings" tabindex="-1">
+                <paper-item raised>Settings</paper-item>
+            </a>
+            <a href="" tabindex="-1">
+                <paper-item raised>Log Out</paper-item>
+            </a>
+
+        </paper-listbox>
+    </paper-menu-button>
+
+  </template>
+
+  <script>
+    class MyMenu extends Polymer.Element {
+      static get is() { return 'my-menu'; }
+      static get properties() {
+        return {
+          
+        }
+      }
+      constructor() {
+        super();
+      }
+
+    }
+
+    window.customElements.define(MyMenu.is, MyMenu);
+  </script>
+</dom-module>
